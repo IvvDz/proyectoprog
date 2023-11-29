@@ -16,7 +16,7 @@ public class Usuario {
     }
 
     public void iniciarAplicacion() {
-        interfaz.mostrarMensaje("¡Bienvenido al programa de apertura de cajas!");
+        interfaz.mostrarMensaje("¡Bienvenido al programa de apertura de cajas, cada caja cuesta 20$!");
         while (true) {
             interfaz.mostrarMensaje("¿Qué deseas hacer?");
             interfaz.mostrarMensaje("1. Abrir una caja");
