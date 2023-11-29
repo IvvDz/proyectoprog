@@ -47,7 +47,7 @@ public class Catalogo {
                 return 5;
             case RARO:
                 return 10;
-                case EPICO:
+            case EPICO:
                 return 20;
             case MITICO:
                 return 100;

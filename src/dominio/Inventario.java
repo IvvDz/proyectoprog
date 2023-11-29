@@ -2,7 +2,7 @@ package dominio;
 
 import java.util.ArrayList;
 
-    public class Inventario {
+public class Inventario {
     private ArrayList<CuchilloObtenido> cuchillos;
 
     public Inventario() {
@@ -18,5 +18,8 @@ import java.util.ArrayList;
     }
 
     public void agregarCuchillo(CuchilloObtenido cuchilloObtenidoInfo) {
+        cuchillos.add(cuchilloObtenidoInfo);
+        System.out.println("Cuchillo agregado al inventario: " + cuchilloObtenidoInfo.getNombre() +
+                " - Calidad: " + cuchilloObtenidoInfo.getCalidad());
     }
 }

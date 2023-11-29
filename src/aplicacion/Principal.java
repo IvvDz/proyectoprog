@@ -6,16 +6,12 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        // Crear una instancia de Interfaz
         Interfaz interfaz = new Interfaz();
 
-        // Crear una instancia de Usuario
         Usuario usuario = new Usuario(interfaz);
 
-        // Crear un Scanner para la entrada del usuario
         Scanner scanner = new Scanner(System.in);
 
-        // Solicitar al usuario qué acción desea realizar
         while (true) {
             interfaz.mostrarMensaje("¿Qué deseas hacer?");
             interfaz.mostrarMensaje("1. Abrir una caja");
@@ -43,13 +39,11 @@ public class Principal {
                     interfaz.mostrarMensaje("Opción no válida. Por favor, elige una opción válida.");
             }
 
-            // Si la opción es "4. Salir", salir del bucle
             if (opcion.equals("4")) {
                 break;
             }
         }
 
-        // Cerrar el Scanner
         scanner.close();
     }
 }
