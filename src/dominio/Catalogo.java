@@ -15,12 +15,12 @@ public class Catalogo {
 
     private void inicializarCatalogo() {
         agregarCuchillo("Cuchillo roto", Calidad.COMUN, 50);
-        agregarCuchillo("Espada de Acero", Calidad.RARO, 30);
+        agregarCuchillo("Cuchillo de Acero", Calidad.RARO, 30);
         agregarCuchillo("Karambit Dorado", Calidad.EPICO, 10);
-        agregarCuchillo("Karambit Shiny", Calidad.MITICO, 3);
+        agregarCuchillo("M9 Bayoneta", Calidad.MITICO, 3);
         agregarCuchillo("Cuchillo Mariposa", Calidad.MITICO, 3);
         agregarCuchillo("God's Sword", Calidad.LEGENDARIO, 1);
-        agregarCuchillo("Espada de Diamante", Calidad.LEGENDARIO, 2);
+        agregarCuchillo("Machete de Diamante", Calidad.LEGENDARIO, 2);
         agregarCuchillo("Cuchillo de Platano Especial", Calidad.ESPECIAL, 1);
     }
 
