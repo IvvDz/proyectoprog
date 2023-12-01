@@ -107,7 +107,7 @@ public class Usuario {
     }
 
     private void mostrarResultadoFinal() {
-        interfaz.mostrarMensaje("Lograste obtener $" + billetera.getSaldo() + " y tienes los siguientes cuchillos:");
+        interfaz.mostrarMensaje("Acabaste con $" + billetera.getSaldo() + " y tienes los siguientes cuchillos:");
         interfaz.mostrarMensaje(verInventario());
     }
 

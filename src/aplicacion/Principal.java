@@ -34,7 +34,7 @@ public class Principal {
                     break;
                 case "4":
                     interfaz.mostrarMensaje("¡Gracias por usar la aplicación!");
-                    interfaz.mostrarMensaje("Lograste obtener $" + usuario.getSaldoBilletera() + " y tienes los siguientes cuchillos:\n" + usuario.verInventario());
+                    interfaz.mostrarMensaje("Acabaste con $" + usuario.getSaldoBilletera() + " y tienes los siguientes cuchillos:\n" + usuario.verInventario());
                     break;
                 default:
                     interfaz.mostrarMensaje("Opción no válida. Por favor, elige una opción válida.");
