@@ -16,7 +16,7 @@ public class Usuario {
     }
 
     public void iniciarAplicacion() {
-        interfaz.mostrarMensaje("¡Bienvenido al programa de apertura de cajas, cada caja cuesta 20$!");
+        interfaz.mostrarMensaje("¡Bienvenido al programa de apertura de cajas, comienzas con 100$ y cada caja cuesta 20$!");
         while (true) {
             interfaz.mostrarMensaje("¿Qué deseas hacer?");
             interfaz.mostrarMensaje("1. Abrir una caja");
@@ -39,7 +39,7 @@ public class Usuario {
                 case "4":
                     interfaz.mostrarMensaje("¡Gracias por usar la aplicación!");
                     mostrarResultadoFinal();
-                    return; // Salir del bucle si el usuario elige salir
+                    return; 
                 default:
                     interfaz.mostrarMensaje("Opción no válida. Por favor, elige una opción válida.");
             }
@@ -64,7 +64,6 @@ public class Usuario {
             Cuchillo cuchilloObtenido = catalogo.obtenerCuchilloAleatorio();
             interfaz.mostrarMensaje("¡Has obtenido un cuchillo!");
    
-            // Crear instancia de CuchilloObtenido y agregar al inventario
             CuchilloObtenido cuchilloObtenidoInfo = new CuchilloObtenido(
                 cuchilloObtenido.getNombre(),
                 catalogo.obtenerProbabilidad(cuchilloObtenido),
@@ -85,6 +84,8 @@ public class Usuario {
             }
         } else {
             interfaz.mostrarMensaje("No tienes suficiente dinero para abrir una caja.");
+            interfaz.mostrarMensaje("Has perdido, mala suerte.");
+            System.exit(0);
         }
     }
     
@@ -98,8 +99,10 @@ public class Usuario {
         int precio = catalogo.obtenerPrecioVenta(cuchilloObtenido);
         billetera.sumarSaldo(precio);
         interfaz.mostrarMensaje("Has vendido el cuchillo por $" + precio + ". Saldo actual: $" + billetera.getSaldo());
-    }
     
+        // Eliminar el cuchillo vendido del inventario
+        inventario.eliminarCuchillo(cuchilloObtenido);
+    }
 
     private void mostrarResultadoFinal() {
         interfaz.mostrarMensaje("Lograste obtener $" + billetera.getSaldo() + " y tienes los siguientes cuchillos en el inventario:");

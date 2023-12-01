@@ -16,6 +16,9 @@ public class Inventario {
         }
         return resultado.toString();
     }
+    public void eliminarCuchillo(CuchilloObtenido cuchillo) {
+        cuchillos.remove(cuchillo);
+    }
 
     public void agregarCuchillo(CuchilloObtenido cuchilloObtenidoInfo) {
         cuchillos.add(cuchilloObtenidoInfo);

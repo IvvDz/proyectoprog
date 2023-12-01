@@ -56,7 +56,7 @@ public class Catalogo {
             case ESPECIAL:
                 return 6666;
             default:
-                return 0; // Valor por defecto en caso de calidad desconocida
+                return 0; 
         }
     }
 }

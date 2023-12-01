@@ -11,9 +11,9 @@ public class Principal {
         Usuario usuario = new Usuario(interfaz);
 
         Scanner scanner = new Scanner(System.in);
-
+        
+        interfaz.mostrarMensaje("¡Bienvenido a la aplicación de apertura de cajas, comienzas con 100$ y cada caja cuesta 20$!");
         while (true) {
-            interfaz.mostrarMensaje("¡Bienvenido a la aplicación de apertura de cajas, cada caja cuesta 20$!");
             interfaz.mostrarMensaje("¿Qué deseas hacer?");
             interfaz.mostrarMensaje("1. Abrir una caja");
             interfaz.mostrarMensaje("2. Ver el inventario");
