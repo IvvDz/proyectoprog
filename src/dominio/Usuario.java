@@ -47,7 +47,7 @@ public class Usuario {
     }
 
     private void mostrarInventario() {
-        interfaz.mostrarMensaje("Inventario actual:\n" + inventario.mostrarInventario());
+        interfaz.mostrarMensaje(inventario.mostrarInventario());
     }
 
     private void mostrarSaldo() {
@@ -85,6 +85,8 @@ public class Usuario {
         } else {
             interfaz.mostrarMensaje("No tienes suficiente dinero para abrir una caja.");
             interfaz.mostrarMensaje("Has perdido, mala suerte.");
+             interfaz.mostrarMensaje("Perdiste todo el dinero"+ " y obtuviste los siguientes cuchillos:");
+             interfaz.mostrarMensaje(verInventario());
             System.exit(0);
         }
     }
@@ -105,7 +107,7 @@ public class Usuario {
     }
 
     private void mostrarResultadoFinal() {
-        interfaz.mostrarMensaje("Lograste obtener $" + billetera.getSaldo() + " y tienes los siguientes cuchillos en el inventario:");
+        interfaz.mostrarMensaje("Lograste obtener $" + billetera.getSaldo() + " y tienes los siguientes cuchillos:");
         interfaz.mostrarMensaje(verInventario());
     }
 

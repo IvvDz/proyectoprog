@@ -27,14 +27,14 @@ public class Principal {
                     usuario.abrirCaja();
                     break;
                 case "2":
-                    interfaz.mostrarMensaje("Inventario actual:\n" + usuario.verInventario());
+                    interfaz.mostrarMensaje(usuario.verInventario());
                     break;
                 case "3":
                     interfaz.mostrarMensaje("Saldo actual: $" + usuario.getSaldoBilletera());
                     break;
                 case "4":
                     interfaz.mostrarMensaje("¡Gracias por usar la aplicación!");
-                    interfaz.mostrarMensaje("Lograste obtener $" + usuario.getSaldoBilletera() + " y tienes los siguientes cuchillos en el inventario:\n" + usuario.verInventario());
+                    interfaz.mostrarMensaje("Lograste obtener $" + usuario.getSaldoBilletera() + " y tienes los siguientes cuchillos:\n" + usuario.verInventario());
                     break;
                 default:
                     interfaz.mostrarMensaje("Opción no válida. Por favor, elige una opción válida.");
